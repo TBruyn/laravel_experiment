@@ -70,7 +70,13 @@
                 <div class="title m-b-md">
                     Pizza list
                 </div>
-                <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+                
+                @foreach($pizzas as $pizza)
+                    <p>{{ $loop->index + 1}}. {{ $pizza['type'] }} - {{ $pizza['base'] }} - {{ $pizza['price'] }}</p>
+                @endforeach
+
+                
+
         </div>
     </body>
 </html>
